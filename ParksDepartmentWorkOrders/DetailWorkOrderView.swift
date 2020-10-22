@@ -19,7 +19,7 @@ struct DetailWorkOrderView: View {
                     .font(.title3)
                     .lineLimit(0)
                 
-                HStack {
+                HStack(spacing: 30) {
                     VStack(alignment: .leading) {
                         Text("Crew:")
                             .font(.title3)
@@ -36,7 +36,7 @@ struct DetailWorkOrderView: View {
                     }
                 }.padding(5)
                 
-                HStack {
+                HStack(spacing: 30) {
                     VStack(alignment: .leading) {
                         Text("Work Time:")
                             .font(.title3)
@@ -52,7 +52,15 @@ struct DetailWorkOrderView: View {
                             .font(.subheadline)
                     }
                 }.padding(5)
+            
             }
+            Image("PlaceholderImage")
+                .resizable()
+                .scaledToFit()
+
+            Image("PlaceholderImage")
+                .resizable()
+                .scaledToFit()
 
 
         }
