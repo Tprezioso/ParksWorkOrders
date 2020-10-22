@@ -12,7 +12,8 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(0 ..< 5) { item in
-                Text("Work Order \(item + 1)")
+                NavigationLink("Work Order \(item + 1)", destination: DetailWorkOrderView())
+                
             }.navigationTitle("Work Orders")
         }
     }
