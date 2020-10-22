@@ -12,7 +12,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(0 ..< 5) { item in
-                Text("Hello World")
+                Text("Work Order \(item + 1)")
             }.navigationTitle("Work Orders")
         }
     }
