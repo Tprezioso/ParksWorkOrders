@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct DetailWorkOrderView: View {
+    var names = ["Tom", "Ed", "Julio"]
+    var materials = ["10 Cold Patch", "5 bottles of Cold Flow"]
+    
     var body: some View {
         ZStack {
             ScrollView {
@@ -16,56 +19,54 @@ struct DetailWorkOrderView: View {
                     .scaledToFit()
                     .padding()
                 
-                VStack(alignment: .leading) {
-                    Text("Work Order Completed XX/XX/XXXX")
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("Work Order Completed:")
+                        .font(.title)
+                        Text("XX/XX/XXXX")
+                            .font(.title2)
+                    
+                    Text("Crew:")
                         .font(.title3)
-                        .lineLimit(0)
-                    
-                    HStack(spacing: 30) {
-                        VStack(alignment: .leading) {
-                            Text("Crew:")
-                                .font(.title3)
-                            Text("Tom")
+                        .font(.subheadline)
+                    ForEach(names, id: \.self) { name in
+                        VStack {
+                            Text(name)
                                 .font(.subheadline)
                         }
                         
-                        Spacer().frame(width: 100)
-                        VStack(alignment: .leading) {
-                            Text("Materials:")
-                                .font(.title3)
-                            Text("10 Cold Patch")
+                    }
+
+                    Text("Materials:")
+                        .font(.title3)
+
+                    ForEach(materials, id: \.self) { material in
+                        VStack {
+                            Text(material)
                                 .font(.subheadline)
                         }
-                    }.padding(5)
+                    }
                     
-                    HStack(spacing: 30) {
-                        VStack(alignment: .leading) {
-                            Text("Work Time:")
-                                .font(.title3)
-                            Text("1 hour")
-                                .font(.subheadline)
-                        }
-                        
-                        Spacer().frame(width: 50)
-                        VStack(alignment: .leading) {
-                            Text("Travel Time:")
-                                .font(.title3)
-                            Text("40 mins")
-                                .font(.subheadline)
-                        }
-                    }.padding(5)
+                    Text("Work Time:")
+                        .font(.title3)
+                    Text("1 hour")
+                        .font(.subheadline)
+                    
+                    Text("Travel Time:")
+                        .font(.title3)
+                    Text("40 mins")
+                        .font(.subheadline)
+                    
+                }.padding()
+                Image("PlaceholderImage")
+                    .resizable()
+                    .scaledToFit()
+                    .padding()
                 
-                }
                 Image("PlaceholderImage")
                     .resizable()
                     .scaledToFit()
                     .padding()
-
-                Image("PlaceholderImage")
-                    .resizable()
-                    .scaledToFit()
-                    .padding()
-
+                
             }
         }
     }
