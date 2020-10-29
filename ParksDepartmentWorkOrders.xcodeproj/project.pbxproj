@@ -13,6 +13,8 @@
 		9F0FBE9F253E30B900604C92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F0FBE9E253E30B900604C92 /* Preview Assets.xcassets */; };
 		9F0FBEA1253E30B900604C92 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0FBEA0253E30B900604C92 /* Persistence.swift */; };
 		9F0FBEA4253E30B900604C92 /* ParksDepartmentWorkOrders.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F0FBEA2253E30B900604C92 /* ParksDepartmentWorkOrders.xcdatamodeld */; };
+		9F5E6C65254B6A590042A00B /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5E6C64254B6A590042A00B /* ScannerView.swift */; };
+		9F5E6C68254B6AB50042A00B /* TextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5E6C67254B6AB50042A00B /* TextRecognizer.swift */; };
 		9F6331E225423712009AB6A2 /* DetailWorkOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6331E125423712009AB6A2 /* DetailWorkOrderView.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		9F0FBEA0253E30B900604C92 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		9F0FBEA3253E30B900604C92 /* ParksDepartmentWorkOrders.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ParksDepartmentWorkOrders.xcdatamodel; sourceTree = "<group>"; };
 		9F0FBEA5253E30B900604C92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F5E6C64254B6A590042A00B /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		9F5E6C67254B6AB50042A00B /* TextRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizer.swift; sourceTree = "<group>"; };
 		9F6331E125423712009AB6A2 /* DetailWorkOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWorkOrderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +64,8 @@
 			children = (
 				9F0FBE97253E30B800604C92 /* ParksDepartmentWorkOrdersApp.swift */,
 				9F0FBE99253E30B800604C92 /* ContentView.swift */,
+				9F5E6C64254B6A590042A00B /* ScannerView.swift */,
+				9F5E6C67254B6AB50042A00B /* TextRecognizer.swift */,
 				9F6331E125423712009AB6A2 /* DetailWorkOrderView.swift */,
 				9F0FBE9B253E30B900604C92 /* Assets.xcassets */,
 				9F0FBEA0253E30B900604C92 /* Persistence.swift */,
@@ -150,7 +156,9 @@
 				9F0FBEA1253E30B900604C92 /* Persistence.swift in Sources */,
 				9F0FBEA4253E30B900604C92 /* ParksDepartmentWorkOrders.xcdatamodeld in Sources */,
 				9F6331E225423712009AB6A2 /* DetailWorkOrderView.swift in Sources */,
+				9F5E6C65254B6A590042A00B /* ScannerView.swift in Sources */,
 				9F0FBE9A253E30B800604C92 /* ContentView.swift in Sources */,
+				9F5E6C68254B6AB50042A00B /* TextRecognizer.swift in Sources */,
 				9F0FBE98253E30B800604C92 /* ParksDepartmentWorkOrdersApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
