@@ -10,17 +10,41 @@ import CoreData
 
 struct ContentView: View {
     var body: some View {
-        NavigationView {
-            List(0 ..< 5) { item in
-                NavigationLink("Work Order \(item + 1)", destination: DetailWorkOrderView())
-                
-            }.navigationTitle("Work Orders")
+            NavigationView {
+                VStack {
+                List(0 ..< 5) { item in
+                    NavigationLink("Work Order \(item + 1)", destination: DetailWorkOrderView())
+                    
+                }.navigationTitle("Work Orders")
+                Button(action: openCamera) {
+                    Text("Scan")
+                }
+                .padding()
+            }
         }
-    }
+}
+    
+    @State private var isShowingScannerSheet = false
+        @State private var text: String = ""
+        
+        private func openCamera() {
+            isShowingScannerSheet = true
+        }
+        
+        private func makeScannerView() -> ScannerView {
+            ScannerView(completion: { textPerPage in
+                if let text = textPerPage?.joined(separator: "\n").trimmingCharacters(in: .whitespacesAndNewlines) {
+                    self.text = text
+                }
+                self.isShowingScannerSheet = false
+            })
+        }
 }
 
+#if DEBUG
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+#endif
