@@ -20,7 +20,7 @@ struct ContentView: View {
                     Text("Scan")
                 }
                 .padding()
-            }
+                }.sheet(isPresented: self.$isShowingScannerSheet) { self.makeScannerView() }
         }
 }
     
