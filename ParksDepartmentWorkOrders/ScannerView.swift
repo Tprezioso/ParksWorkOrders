@@ -42,6 +42,14 @@ struct ScannerView: UIViewControllerRepresentable {
             print("Document camera view controller did finish with ", scan)
             let recognizer = TextRecognizer(cameraScan: scan)
             recognizer.recognizeText(withCompletionHandler: completionHandler)
+            
+            #warning("Need to see how to save the scan")
+            // TODO: - Need to save the scan
+            for index in 0 ..< scan.pageCount {
+                let image = scan.imageOfPage(at: index)
+                  // save image
+                print("Save image\(image)")
+            }
         }
         
         func documentCameraViewControllerDidCancel(_ controller: VNDocumentCameraViewController) {
@@ -54,9 +62,3 @@ struct ScannerView: UIViewControllerRepresentable {
         }
     }
 }
-
-//struct ScannerView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ScannerView()
-//    }
-//}

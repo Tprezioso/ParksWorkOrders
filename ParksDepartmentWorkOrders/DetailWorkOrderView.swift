@@ -22,8 +22,8 @@ struct DetailWorkOrderView: View {
                 VStack(alignment: .leading, spacing: 10) {
                     Text("Work Order Completed:")
                         .font(.title)
-                        Text("XX/XX/XXXX")
-                            .font(.title2)
+                    Text("XX/XX/XXXX")
+                        .font(.title2)
                     
                     Text("Crew:")
                         .font(.title3)
@@ -35,10 +35,10 @@ struct DetailWorkOrderView: View {
                         }
                         
                     }
-
+                    
                     Text("Materials:")
                         .font(.title3)
-
+                    
                     ForEach(materials, id: \.self) { material in
                         VStack {
                             Text(material)

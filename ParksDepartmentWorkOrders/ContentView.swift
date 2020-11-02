@@ -10,8 +10,8 @@ import CoreData
 
 struct ContentView: View {
     var body: some View {
-            NavigationView {
-                VStack {
+        NavigationView {
+            VStack {
                 List(0 ..< 5) { item in
                     NavigationLink("Work Order \(item + 1)", destination: DetailWorkOrderView())
                     
@@ -20,25 +20,25 @@ struct ContentView: View {
                     Text("Scan")
                 }
                 .padding()
-                }.sheet(isPresented: self.$isShowingScannerSheet) { self.makeScannerView() }
+            }.sheet(isPresented: self.$isShowingScannerSheet) { self.makeScannerView() }
         }
-}
+    }
     
     @State private var isShowingScannerSheet = false
-        @State private var text: String = ""
-        
-        private func openCamera() {
-            isShowingScannerSheet = true
-        }
-        
-        private func makeScannerView() -> ScannerView {
-            ScannerView(completion: { textPerPage in
-                if let text = textPerPage?.joined(separator: "\n").trimmingCharacters(in: .whitespacesAndNewlines) {
-                    self.text = text
-                }
-                self.isShowingScannerSheet = false
-            })
-        }
+    @State private var text: String = ""
+    
+    private func openCamera() {
+        isShowingScannerSheet = true
+    }
+    
+    private func makeScannerView() -> ScannerView {
+        ScannerView(completion: { textPerPage in
+            if let text = textPerPage?.joined(separator: "\n").trimmingCharacters(in: .whitespacesAndNewlines) {
+                self.text = text
+            }
+            self.isShowingScannerSheet = false
+        })
+    }
 }
 
 #if DEBUG
